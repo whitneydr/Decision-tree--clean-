@@ -6,7 +6,7 @@ let decisionTree = document.getElementById("decision-tree");
 // Initiates the decision tree
 // Removes the start banner and displays the first question
 const handleStartBtn = () => {
-    document.getElementById('decisionTree-start').remove();
+    clearScreen();
     buildQuestionBlock('q001');
 };
 
