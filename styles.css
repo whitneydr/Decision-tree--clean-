@@ -10,8 +10,9 @@ html {
   padding-right: 1rem;
 }
 
-.decisionTree-banner {
+/* Start banner */
 
+.decisionTree-banner {
   display: flex;
   margin: 48px 0;
   background-color: #23254F;
@@ -52,6 +53,8 @@ html {
     max-width: 100%;
   }
 }
+
+/* Question block */
 
 .decisionTree__questions {
   display: flex;
@@ -182,6 +185,8 @@ input[type="radio"]:checked {
   background-color: #0074CC;
 }
 
+/* Result block */
+
 .decisionTree-resultCard {
   width: 300px;
   background-color: #fff;
@@ -202,5 +207,3 @@ input[type="radio"]:checked {
 .decisionTree-resultCard__text {
   padding: 16px;
 }
-
-/*# sourceMappingURL=styles.css.map */

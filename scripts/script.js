@@ -26,14 +26,14 @@ const buildQuestionBlock = (qnum) => {
     <div class="decisionTree__nav">
     <button id="prev-btn" class="btn btn--secondary" onclick="goBack('${prevQuestionNumber}')">Previous</button>
     <button id="next-btn" class="btn btn--primary" onclick="nextQuestion()">Next</button></div>
-</div>
+    </div>
     `;
 
     questionBlock.innerHTML = questionContent;
     decisionTree.appendChild(questionBlock);
     console.log(questionNumber,prevQuestionNumber);
 
-    // Search the questions array for the correct question and inserts the values into the template
+    // Search the questions array for the correct question and insert the values into the template
     for (let q of questions) {
         if (q.stepCode === qnum) {
             let getQuestion = `<h3>${q.question}</h3>
@@ -96,10 +96,9 @@ const nextQuestion = (nextStep) => {
     prevQuestionNumber = questionNumber;
 
     if (nextStep.startsWith('q')) {
-        document.getElementById('decisionTree__questions').remove();
+       clearScreen();
         questionNumber = nextStep;
-        buildQuestionBlock(nextStep);
-        
+        buildQuestionBlock(nextStep);  
     } else {
         buildResultBlock(nextStep);
     }
@@ -109,7 +108,7 @@ const nextQuestion = (nextStep) => {
 const goBack = (prev) => {
     clearScreen();
     if (prev === 'q000') {
-        decisionTree.innerHTML = ` <div class="decisionTree-banner" id="decisionTree-start">
+        decisionTree.innerHTML = `<div class="decisionTree-banner" id="decisionTree-start">
         <div class="decisionTree-banner__image">
             <img
                 src='https://www.co-operativebank.co.uk/contentAsset/raw-data/ddd0b18a-9d00-4c27-ac73-e404add9aa60/fileAsset?language_id=1' />
@@ -123,7 +122,6 @@ const goBack = (prev) => {
             <button data-test="component-button" class="btn btn--primary" id="startBtn" onclick="handleStartBtn()">
                 Compare our accounts
             </button>
-
         </div>`;
     } else {
         buildQuestionBlock(prevQuestionNumber);
