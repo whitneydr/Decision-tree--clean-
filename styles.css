@@ -1,0 +1,206 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.decisionTree-banner {
+
+  display: flex;
+  margin: 48px 0;
+  background-color: #23254F;
+  color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .decisionTree-banner {
+    flex-direction: column;
+  }
+}
+
+.decisionTree-banner__image {
+  max-width: 33.3333333333%;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .decisionTree-banner__image {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+.decisionTree-banner__image img {
+  width: 100%;
+}
+
+.decisionTree-banner__text {
+  margin: 10px;
+  max-width: 66.6666666667%;
+}
+
+@media only screen and (max-width: 768px) {
+  .decisionTree-banner__text {
+    max-width: 100%;
+  }
+}
+
+.decisionTree__questions {
+  display: flex;
+  flex-direction: column;
+  background-color: #F5FBFE;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.decisionTree__question {
+  margin: 16px 0;
+}
+
+.decisionTree__nav {
+  align-self: flex-end;
+  margin-top: 16px;
+}
+
+.decisionTree__nav .btn {
+  margin-right: 8px;
+}
+
+.btn,
+.btn.btn--selected {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  min-width: 8em;
+  max-width: 16em;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: #0074CC;
+  color: #fff;
+  transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s, border 0.2s ease-out 0s;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0074CC;
+  border-radius: 8px;
+  padding: 9px 16px;
+  text-decoration: none;
+  margin-top: 8px;
+  margin-bottom: 8px
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: #008BF5 !important;
+  border-color: #008BF5;
+  color: #fff !important
+}
+
+.btn:focus-visible {
+  background-color: #0074CC !important;
+  border-color: #0074CC;
+  outline: 2px solid #002663;
+  outline-offset: 2px !important
+}
+
+.btn:focus-visible:hover {
+  background-color: #008BF5 !important;
+  border-color: #008BF5;
+  color: #fff
+}
+
+.btn--primary {
+  background-color: #0074CC;
+  color: #fff;
+  box-shadow: none;
+  margin-right: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #0074CC
+}
+
+.btn--secondary,
+.btn.btn--select {
+  background-color: #fff;
+  color: #060A0D !important;
+  border-color: #AFB1B3
+}
+
+.btn--secondary:hover,
+.btn.btn--select:hover,
+.btn--secondary:active,
+.btn.btn--select:active,
+.btn--secondary:focus,
+.btn.btn--select:focus {
+  background-color: #F2F9FF !important;
+  color: #002663 !important;
+  border-color: #002663
+}
+
+.btn--secondary:focus-visible,
+.btn.btn--select:focus-visible {
+  border-color: #AFB1B3;
+  background-color: #fff !important;
+  color: #060A0D !important
+}
+
+.btn--secondary:focus-visible:hover,
+.btn.btn--select:focus-visible:hover {
+  background-color: #F2F9FF !important;
+  border-color: #002663;
+  color: #002663 !important
+}
+
+
+input[type="radio"] {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border: 2px solid #AFB1B3;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  background-color: #fff;
+
+  position: relative;
+  top: 4px;
+}
+
+input[type="radio"]:checked {
+  border: 2px solid #0074cc;
+  background-color: #0074CC;
+}
+
+.decisionTree-resultCard {
+  width: 300px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #E1E4E5;
+  margin: 16px 0;
+}
+
+.decisionTree-resultCard__image {
+  width: 100%;
+}
+
+.decisionTree-resultCard__image img {
+  width: 100%;
+}
+
+.decisionTree-resultCard__text {
+  padding: 16px;
+}
+
+/*# sourceMappingURL=styles.css.map */
